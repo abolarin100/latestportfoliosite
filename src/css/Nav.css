@@ -1,0 +1,36 @@
+nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 40px;
+    
+  }
+  a{
+    color: rgb(55, 51, 120);
+    /* margin-left: auto; */
+  }
+  .navbar {
+    position: fixed;
+    right: 0%;
+    left: 0%;
+    top: 0%;
+    z-index: 1030;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+  
+  }
+  
+  .nav__link {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+    transition: 0.3s;
+  }
+  
+  .nav__link:hover {
+    color: hsl(43, 76%, 10%);
+  }
