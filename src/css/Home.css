@@ -2,8 +2,12 @@
     position: relative;
     min-height: 100vh;
     display: flex;
+    position: relative;
+    bottom:2px;
     align-items: center;
     justify-content: center;
+    z-index: 0;
+    
   }
   
   .intro {
@@ -24,8 +28,10 @@
   
   .home__socials {
     display: flex;
-    column-gap: 1.75rem;
-    margin: 1.5rem 0;
+    justify-content: center;
+    column-gap: 1.5rem;
+    margin: 1.1rem 0;
+    /* margin-left: 40px; */
   }
   
   .home__social-link {

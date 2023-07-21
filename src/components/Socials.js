@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaGithub, FaLinkedinIn, FaInstagram, FaTwitter} from 'react-icons/fa' ;
+import {FaGithub, FaLinkedinIn, FaInstagram, FaTwitter,} from 'react-icons/fa' ;
 
 
 const Socials = () => {
@@ -20,6 +20,7 @@ const Socials = () => {
             <a href='https://twitter.com/iam_abolarin' className='home__social-link' target='_blank' rel='noreferrer'>
                 <FaTwitter />
             </a>
+            
 
         </div>
     );
