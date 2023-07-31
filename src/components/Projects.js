@@ -12,7 +12,12 @@ const Projects = () => {
                         <div className="services__card">
                
 
-                            <a href='https://myhealthblog.vercel.app/' className="services__title">My Health Blog</a>
+                            <a href='https://myhealthblog.vercel.app/' className="services__title">
+                                
+                                <img src="" alt="" />
+                                My Health Blog
+
+                            </a>
                             
                             
                         </div>
@@ -23,7 +28,7 @@ const Projects = () => {
                         </div>
                         <div className="services__card">
                
-                            <a href='https://myhealthblog.vercel.app/' className="services__title">My Job Site</a>
+                            <a href='https://myjobsite.vercel.app/' className="services__title">My Job Site</a>
 
                         </div>
                         <div className="services__card">
