@@ -1,4 +1,9 @@
 import React from 'react';
+import Da from '../assets/image/davolayebi.jpg'
+import Ga from '../assets/image/gadget.jpg'
+import Ha from '../assets/image/health.jpg'
+import Ja from '../assets/image/jobsite.png'
+import La from '../assets/image/loginform.jpg'
 import '../css/Projects.css'
 
 const Projects = () => {
@@ -12,10 +17,10 @@ const Projects = () => {
                         <div className="services__card">
                
 
-                            <a href='https://myhealthblog.vercel.app/' className="services__title">
+                            <a href='https://myhealthblog.vercel.app/' target='_blank' className="services__title">
                                 
-                                <img src="" alt="" />
-                                My Health Blog
+                                <img src={Ha}  alt="" />
+                                {/* My Health Blog */}
 
                             </a>
                             
@@ -23,23 +28,38 @@ const Projects = () => {
                         </div>
                         <div className="services__card">
                
-                            <a href='https://davolayebi.vercel.app/' className="services__title">Davolayebi Nigeria Limited</a>   
+                            <a href='https://davolayebi.vercel.app/' target='_blank' className="services__title">
+                               <img src={Da} alt="" />
+                                {/* Davolayebi Nigeria Limited */}
+                                </a>   
                            
                         </div>
                         <div className="services__card">
                
-                            <a href='https://myjobsite.vercel.app/' className="services__title">My Job Site</a>
+                            <a href='https://myjobsite.vercel.app/' target='_blank' className="services__title">
+                               
+                            <img src={Ja} alt="" />
+                                {/* My Job Site */}
+                                </a>
 
                         </div>
                         <div className="services__card">
                
-                            <a href='https://gadgetbyjerry.vercel.app/' className="services__title">Gadgets by Jerry</a>
+                            <a href='https://gadgetbyjerry.vercel.app/' target='_blank' className="services__title">
+                                
+                            <img src={Ga} alt="" />
+                                {/* Gadgets by Jerry */}
+                                </a>
                           
                             
                         </div>
                         <div className="services__card">
                
-                            <a href='https://login-form-js-abolarin100.vercel.app/' className="services__title">Login Form</a>
+                            <a href='https://login-form-js-abolarin100.vercel.app/' target='_blank' className="services__title">
+                                
+                            <img src={La} alt="" />
+                                {/* Login Form */}
+                                </a>
 
                             
                         </div>
