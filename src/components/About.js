@@ -13,7 +13,7 @@ const About = () => {
             <div className="about__data grid">
                 <div className="about__info">
                     <p className="about__description">
-                    As a passionate Frontend Developer with years of experience, I am skilled in creating intuitive, user-friendly interfaces. I can seamlessly integrate REST APIs in React. I have experience collaborating with designers, back-end developers, and project managers to ensure seamless integration of all components. I am also passionate about staying up-to-date with the latest trends and best practices in web development, and regularly attend conferences and workshops to expand my knowledge. I can add immense value with skills and capacities while experiencing personal and professional growth.<br /><br />
+                    As a passionate Frontend Developer with years of experience in writing clean and reusable code. I am skilled in creating intuitive, user-friendly interfaces. I can seamlessly integrate REST APIs in my projects and interact with any Database/Libraries. I have experience collaborating with designers, back-end developers, and project managers to ensure seamless integration of all components. I am also passionate about staying up-to-date with the latest trends and best practices in web development, and regularly attend conferences and workshops to expand my knowledge. I can add immense value with skills and capacities while experiencing personal and professional growth.<br /><br />
                         Here are a few technologies I have been working with recently:
                     </p>
                     <ul className="about__list">
@@ -23,6 +23,11 @@ const About = () => {
                         <li>Html</li>
                         <li>Bootstrap</li>
                         <li>Git&GitHub</li>
+                        <li>Firebase</li>
+                        <li>Vuejs</li>
+                        <li>MongoDb</li>
+                        <li>ExpressJs</li>
+                        <li>NodeJs</li>
                     </ul>
                     {/* <button className="btn" onClick={downloadResume}>Donwload CV</button> */}
                 </div>
