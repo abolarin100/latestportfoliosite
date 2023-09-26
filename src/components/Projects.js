@@ -4,6 +4,7 @@ import Ga from '../assets/image/gadget.jpg'
 import Ha from '../assets/image/health.jpg'
 import Ja from '../assets/image/jobsite.png'
 import La from '../assets/image/loginform.jpg'
+import Pa from '../assets/image/parcel1.jpg'
 import '../css/Projects.css'
 
 const Projects = () => {
@@ -14,6 +15,18 @@ const Projects = () => {
 
             <div className="services__container grid">
                 
+                        <div className="services__card">
+               
+
+                            <a href='https://parceltracker.vercel.app/' target='_blank' className="services__title">
+                                
+                                <img src={Pa}  alt="" />
+                                {/* My Health Blog */}
+
+                            </a>
+                            
+                            
+                        </div>
                         <div className="services__card">
                
 
@@ -55,7 +68,7 @@ const Projects = () => {
                         </div>
                         <div className="services__card">
                
-                            <a href='https://login-form-js-abolarin100.vercel.app/' target='_blank' className="services__title">
+                            <a href='https://loginform-sooty.vercel.app/' target='_blank' className="services__title">
                                 
                             <img src={La} alt="" />
                                 {/* Login Form */}
