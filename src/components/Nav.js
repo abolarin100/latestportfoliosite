@@ -48,8 +48,8 @@ const Navbar = () => {
     };
 
     return (
-        <div className={`bg-[#A7AEB91A] z-50 fixed w-full flex justify-between py-2 sm:py-2 md:py-0 lg:py-0 px-2 sm:px-4 md:px-4 lg:px-16 items-center shadow-md border-b border-[#A7AEB91A]
-    ${scrolling ? 'scrolled' : 'opacity-0 transition duration-1000 ease-out'}`}
+        <div className={`bg-[#e1e3e7] z-50000000 fixed w-full flex justify-between py-2 sm:py-2 md:py-0 lg:py-0 px-2 sm:px-4 md:px-4 lg:px-16 items-center shadow-md border-b border-[#A7AEB91A] bg-opacity-100 opacity-100 
+    `}
         >
             <img src={LG} alt="" className='home__img relative left-4 top-2' width='40' height='40' />
 
