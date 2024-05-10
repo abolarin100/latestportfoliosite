@@ -60,8 +60,8 @@ const Skills = () => {
         },
         {
             id: 12,
-            name: "Framer Motion",
-            imageSource: require("../assets/framer.png"),
+            name: "vite",
+            imageSource: require("../assets/vite.png"),
         },
         {
             id: 13,
@@ -85,8 +85,9 @@ const Skills = () => {
         },
         {
             id: 17,
-            name: "vite",
-            imageSource: require("../assets/vite.png"),
+            name: "Framer Motion",
+            imageSource: require("../assets/framer.png"),
+            
         },
     ];
 
