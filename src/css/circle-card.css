@@ -1,0 +1,69 @@
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .circle {
+    position: relative;
+  }
+  
+  .circle-card-cont {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 88%);
+    box-shadow: 5px 5px 1rem #b5b5b5, -2px -2px 1rem #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+
+
+  @media screen and (max-width: 767px) {
+    .circle-card-cont {
+        width: 5rem;
+        height: 5rem;
+       
+      }
+  }
+  
+  .logo_name {
+    position: absolute;
+    /* bottom: -2.9rem; */
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+    opacity: 0;
+  }
+  
+  .circle-card-cont:hover {
+    scale: 1.2;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .circle-card-cont:hover ~ .logo_name {
+    opacity: 1;
+  }
+  
+  #dark .circle-card-cont {
+    background-color: var(--primary-bg-dark);
+    box-shadow: var(--box-shadow-dark);
+  }
+  
+  .circle-img {
+    /* width: 80%;
+    height: 80%; */
+    object-fit: contain;
+  }

@@ -4,7 +4,7 @@ import {FaGithub, FaLinkedinIn, FaInstagram, FaTwitter,} from 'react-icons/fa' ;
 
 const Socials = () => {
     return (
-        <div className='home__socials'>
+        <div className='home__socials justify-center lg:justify-start'>
             <a href='https://github.com/abolarin100' className='home__social-link' target='_blank' rel='noreferrer'>
                 <FaGithub />
             </a>

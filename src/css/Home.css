@@ -5,8 +5,10 @@
     position: relative;
     bottom:15px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     z-index: 0;
+    flex-direction: row-reverse;
+    
     
   }
   
@@ -21,17 +23,17 @@
   }
   
   .home__name {
-    font-size: var(--h1-font-size);
+    font-size: 4rem;
     font-weight: var(--font-bold);
     margin-bottom: 0.5rem;
   }
   
   .home__socials {
     display: flex;
-    justify-content: center;
+    /* justify-content: flex-start; */
     column-gap: 1.5rem;
     margin: 1.1rem 0;
-    /* margin-left: 40px; */
+    margin-left: 16px;
   }
   
   .home__social-link {
