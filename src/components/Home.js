@@ -13,12 +13,12 @@ const Home = () => {
             <div className='mt-16  lg:mt-0 w-[80%] lg:w-[50%] pb-8 '>
                 <img src={He} alt="" className=' w-[100%] ' />
             </div>
-            <div className=" hidden lg:block w-[70%] pl-8  mb-16 lg:mb-0  mt-20 lg:mt-8  ">
+            <div className=" hidden lg:block w-[70%] pl-8  mb-16 lg:mb-0  mt-20 lg:mt-4  ">
 
                 <div className=''>
                     <h1 className=" font-semibold text-2xl ">Hi <span className="text-4xl">👋</span>  </h1>
 
-                    <h3 className="font-bold text-2xl pt-3" style={{ display: "flex", gap: 8,  }}>
+                    <h3 className="font-bold text-2xl pt-2" style={{ display: "flex", gap: 8,  }}>
 
                         <span className='w-[] '>I am </span>
                         <Typewriter
@@ -27,7 +27,7 @@ const Home = () => {
                         />
 
                     </h3>
-                    <h1 className="home__name w-[80%]   pt-2  ">I create beautiful and interactive user interfaces </h1>
+                    <h1 className="home__name w-[80%]   pt-1  ">I create beautiful and interactive user interfaces </h1>
 
 
 
@@ -37,7 +37,7 @@ const Home = () => {
                 </div>
 
 
-                <div className='pt-2' >
+                <div className='pt-1' >
 
 
                     <Socials className='' />

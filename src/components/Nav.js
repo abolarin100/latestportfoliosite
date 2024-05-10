@@ -51,7 +51,7 @@ const Navbar = () => {
         <div className={`bg-[#A7AEB91A] z-50 fixed w-full flex justify-between py-2 sm:py-2 md:py-0 lg:py-0 px-2 sm:px-4 md:px-4 lg:px-16 items-center shadow-md border-b border-[#A7AEB91A]
     ${scrolling ? 'scrolled' : 'opacity-0 transition duration-1000 ease-out'}`}
         >
-            <img src={LG} alt="" className='home__img relative left-4 top-2' width='40' height='60' />
+            <img src={LG} alt="" className='home__img relative left-4 top-2' width='40' height='40' />
 
             {/* Visible on md and larger screens */}
             <div className='hidden lg:flex  flex-row justify-between  '>
