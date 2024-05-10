@@ -1,10 +1,10 @@
 import React from 'react';
 import Da from '../assets/image/davolayebi.jpg'
 import Ga from '../assets/image/sawl.png'
-import Ha from '../assets/image/health.jpg'
-import Ja from '../assets/image/jobsite.png'
-import La from '../assets/image/loginform.jpg'
-import Pa from '../assets/image/parcel1.jpg'
+import Ha from '../assets/image/menu.png'
+import Ja from '../assets/image/job.png'
+import La from '../assets/image/myweb.png'
+import Pa from '../assets/image/mbd.png'
 import '../css/Projects.css'
 
 const Projects = () => {
@@ -15,68 +15,165 @@ const Projects = () => {
 
                 <div className="services__container grid">
 
-                    <div className="services__card">
+                    <div className='flex flex-col items-start space-y-[1px] bg-[#A7AEB91A] hover:scale-105  '>
+                        <img src={Ga} alt=""
+                            className=' w-full object-cover'
+                        />
+                        <div className=' shadow-md shadow-gray-400 w-full rounded-b-md'>
+                            <div className='flex flex-row justify-between pt-2 px-4'>
+                                <div className='pt-2'>
+                                    <h2 className='font-semibold'>Smart Approaches </h2>
+                                    <div className='flex space-x-2 pt-2'>
+                                        <p>An online learning platform for students taking the Data analysis and Business Analysis courses.</p>
 
+                                    </div>
+                                </div>
 
-                        <a href='https://parceltracker.vercel.app/' target='_blank' className="services__title">
+                            </div>
 
-                            <img src={Pa} alt="" />
-                            {/* My Health Blog */}
+                            <div className='flex flex-row justify-between px-4 pt-4 pb-4'>
+                                <a href="https://github.com/abolarin100/SAWL-FRONTEND">
+                                    <button className='hover:bg-[#7b8ca71a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >GitHub</button>
+                                </a>
+                                <a href="https://sawl.vercel.app/">
+                                    <button className='hover:bg-[#a5b3c91a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >Live link</button>
 
-                        </a>
+                                </a>
+                            </div>
 
-
-                    </div>
-                    <div className="services__card">
-
-                        <a href='https://sawl.vercel.app/' target='_blank' className="services__title">
-
-                            <img src={Ga} alt="" />
-                            {/* Gadgets by Jerry */}
-                        </a>
-
-
-                    </div>
-                    <div className="services__card">
-
-
-                        <a href='https://myhealthblog.vercel.app/' target='_blank' className="services__title">
-
-                            <img src={Ha} alt="" />
-                            {/* My Health Blog */}
-
-                        </a>
+                        </div>
 
 
                     </div>
-                    <div className="services__card">
 
-                        <a href='https://davolayebi.vercel.app/' target='_blank' className="services__title">
-                            <img src={Da} alt="" />
-                            {/* Davolayebi Nigeria Limited */}
-                        </a>
+                    <div className='flex flex-col items-start space-y-[1px] bg-[#A7AEB91A] hover:scale-105'>
+                        <img src={Ha} alt=""
+                            className=' w-full object-cover'
+                        />
+                        <div className=' shadow-md shadow-gray-400 w-full rounded-b-md'>
+                            <div className='flex flex-row justify-between pt-2 px-4'>
+                                <div className='pt-2'>
+                                    <h2 className='font-semibold'>Jay's Menu </h2>
+                                    <div className='flex space-x-2 pt-2'>
+                                        <p> A comprehensive online menu for browsing dishes, exploring descriptions, and viewing visuals</p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div className='flex flex-row justify-between px-4 pt-4 pb-4'>
+                                <a href="https://github.com/abolarin100/food-menu">
+                                    <button className='hover:bg-[#7b8ca71a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >GitHub</button>
+                                </a>
+                                <a href="https://jays-menu.vercel.app/">
+                                    <button className='hover:bg-[#a5b3c91a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >Live link</button>
+
+                                </a>
+                            </div>
+
+                        </div>
+
 
                     </div>
-                    <div className="services__card">
+                    <div className='flex flex-col items-start space-y-[1px] bg-[#A7AEB91A] hover:scale-105'>
+                        <img src={La} alt=""
+                            className=' w-full object-cover'
+                        />
+                        <div className=' shadow-md shadow-gray-400 w-full rounded-b-md'>
+                            <div className='flex flex-row justify-between pt-2 px-4'>
+                                <div className='pt-2'>
+                                    <h2 className='font-semibold'>My Portfolio Website </h2>
+                                    <div className='flex space-x-2 pt-2'>
+                                        <p>Created to display my skills and expertise in developing beautiful and interactive user interfaces .</p>
 
-                        <a href='https://myjobsite.vercel.app/' target='_blank' className="services__title">
+                                    </div>
+                                </div>
 
-                            <img src={Ja} alt="" />
-                            {/* My Job Site */}
-                        </a>
+                            </div>
+
+                            <div className='flex flex-row justify-between px-4 pt-4 pb-4'>
+                                <a href="https://github.com/abolarin100/latestportfoliosite">
+                                    <button className='hover:bg-[#7b8ca71a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >GitHub</button>
+                                </a>
+                                <a href="https://jeremiah-atoyebi.vercel.app/">
+                                    <button className='hover:bg-[#a5b3c91a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >Live link</button>
+
+                                </a>
+                            </div>
+
+                        </div>
+
 
                     </div>
 
-                    <div className="services__card">
+                    <div className='flex flex-col items-start space-y-[1px] bg-[#A7AEB91A] hover:scale-105  '>
+                        <img src={Pa} alt=""
+                            className=' w-full object-cover'
+                        />
+                        <div className=' shadow-md shadow-gray-400 w-full rounded-b-md'>
+                            <div className='flex flex-row justify-between pt-2 px-4'>
+                                <div className='pt-2'>
+                                    <h2 className='font-semibold'>Multi-bag Delivery </h2>
+                                    <div className='flex space-x-2 pt-2'>
+                                        <p>A Parcel tracker platform for monitoring the delivery date of goods.</p>
 
-                        <a href='https://loginform-sooty.vercel.app/' target='_blank' className="services__title">
+                                    </div>
+                                </div>
 
-                            <img src={La} alt="" />
-                            {/* Login Form */}
-                        </a>
+                            </div>
+
+                            <div className='flex flex-row justify-between px-4 pt-4 pb-4'>
+                                <a href="https://github.com/abolarin100/parceltracker">
+                                    <button className='hover:bg-[#7b8ca71a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >GitHub</button>
+                                </a>
+                                <a href="https://parceltracker.vercel.app/">
+                                    <button className='hover:bg-[#a5b3c91a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >Live link</button>
+
+                                </a>
+                            </div>
+
+                        </div>
 
 
                     </div>
+                    <div className='flex flex-col items-start space-y-[1px] bg-[#A7AEB91A] hover:scale-105  '>
+                        <img src={Ja} alt=""
+                            className=' w-full object-cover'
+                        />
+                        <div className=' shadow-md shadow-gray-400 w-full rounded-b-md'>
+                            <div className='flex flex-row justify-between pt-2 px-4'>
+                                <div className='pt-2'>
+                                    <h2 className='font-semibold'>Jobsite </h2>
+                                    <div className='flex space-x-2 pt-2'>
+                                        <p>An online platform for job hunters to see the latest job openings in their city. </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div className='flex flex-row justify-between px-4 pt-4 pb-4'>
+                                <a href="https://github.com/abolarin100/myjobsite">
+                                    <button className='hover:bg-[#7b8ca71a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >GitHub</button>
+                                </a>
+                                <a href="https://myjobsite.vercel.app/">
+                                    <button className='hover:bg-[#a5b3c91a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >Live link</button>
+
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                   
+                    
+                   
+                   
+                   
+
 
                 </div>
             </section>

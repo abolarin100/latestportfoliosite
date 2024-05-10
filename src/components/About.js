@@ -13,7 +13,7 @@ const About = () => {
                 <div className="about__data grid">
                     <div className="about__info">
                         <p className="about__description">
-                        As a passionate Frontend Developer with years of experience in writing clean and reusable code, I am skilled in creating intuitive, user-friendly interfaces. I can seamlessly integrate REST APIs in my projects and interact with any Database or Library. I have experience collaborating with designers, back-end developers, and project managers to ensure seamless integration of all components. I am also passionate about staying up-to-date with the latest trends and best practices in web development, and regularly attend conferences and workshops to expand my knowledge. I can add immense value with skills and capacities while experiencing personal and professional growth.<br /><br />
+                        As a passionate Frontend Engineer with years of experience in writing clean and reusable code, I am skilled in creating intuitive, user-friendly interfaces. I can seamlessly integrate REST APIs in my application. I have experience working in an agile environment and collaborating with designers, back-end developers, and project managers to ensure seamless integration of all components. I am also passionate about staying up-to- date with the latest trends and best practices in software development, and regularly attend conferences and workshops to expand my knowledge. I can add immense value with skills and capacities while experiencing personal and professional growth.<br /><br />
                            
                         </p>
                        

@@ -13,7 +13,7 @@ const Home = () => {
             <div className='mt-16  lg:mt-0 w-[80%] lg:w-[50%] pb-8 '>
                 <img src={He} alt="" className=' w-[100%] ' />
             </div>
-            <div className=" hidden lg:block w-[70%] pl-8  mb-16 lg:mb-0  mt-20 lg:mt-0  ">
+            <div className=" hidden lg:block w-[70%] pl-8  mb-16 lg:mb-0  mt-20 lg:mt-8  ">
 
                 <div className=''>
                     <h1 className=" font-semibold text-2xl ">Hi <span className="text-4xl">👋</span>  </h1>
