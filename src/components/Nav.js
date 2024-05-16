@@ -110,7 +110,7 @@ const Navbar = () => {
                         className='hover:text-blue-500 hover:cursor-pointer text-l text-white py-8 px-2'
                         
                     >
-                       <a href="#home"  >Home</a>
+                       <a href="./"  >Home</a>
                     </li>
                     <li
                        className='hover:text-blue-500 hover:cursor-pointer text-l py-8 px-2'
