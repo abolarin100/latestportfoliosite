@@ -48,40 +48,42 @@ const Navbar = () => {
     };
 
     return (
-        <div className={`bg-[#e1e3e7] z-50000000 fixed w-full flex justify-between py-2 sm:py-2 md:py-0 lg:py-0 px-2 sm:px-4 md:px-4 lg:px-16 items-center shadow-md border-b border-[#A7AEB91A] bg-opacity-100 opacity-100 
+
+        <>
+         <div className={`bg-[#e1e3e7] z-50 fixed w-full flex justify-between py-2 sm:py-2 md:py-0 lg:py-0 px-2 sm:px-4 md:px-4 lg:px-16 items-center shadow-md border-b border-[#A7AEB91A] bg-opacity-100 opacity-100 
     `}
         >
-            <img src={LG} alt="" className='home__img relative left-4 top-2' width='40' height='40' />
+            <img src={LG} alt="" className=' relative left-4 ' width='40' height='0' />
 
             {/* Visible on md and larger screens */}
             <div className='hidden lg:flex  flex-row justify-between  '>
                 <ul className='flex flex-row mr-28 px-4 space-x-8  lg:mr-28 md:mr-16'>
                 <li
-                        className='hover:text-blue-500 hover:cursor-pointer text-l text-black py-8 px-2'
+                        className='hover:text-blue-500 hover:cursor-pointer text-l text-black py-4 px-2'
                         
                     >
                        <a href="./"  >Home</a>
                     </li>
                     <li
-                       className='hover:text-blue-500 hover:cursor-pointer text-l py-8 px-2'
+                       className='hover:text-blue-500 hover:cursor-pointer text-l py-4 px-2'
                         
                     >
                        <a href="#about"  >About</a>
                     </li>
                     <li
-                        className='hover:text-blue-500 hover:cursor-pointer text-l py-8 px-2'
+                        className='hover:text-blue-500 hover:cursor-pointer text-l py-4 px-2'
                       
                     >
                         <a href="#skills"  >Skills</a>
                     </li>
                     <li
-                        className='hover:text-blue-500 hover:cursor-pointer text-l py-8 px-2'
+                        className='hover:text-blue-500 hover:cursor-pointer text-l py-4 px-2'
                         
                     >
                        <a href="#projects"  >Projects</a> 
                     </li>
                     <li
-                        className='hover:text-blue-500 hover:cursor-pointer text-l py-8 px-2'
+                        className='hover:text-blue-500 hover:cursor-pointer text-l py-4 px-2'
                         
                     >
                        <a href="#contact"  >Contact</a>
@@ -100,7 +102,7 @@ const Navbar = () => {
                 className={
                     nav
                         ? 'ease-in duration-300 fixed text-gray-300 left-0 top-0 w-full h-screen bg-black/90 px-4 py-7 flex-col z-10'
-                        : 'absolute top-0 h-screen left-[-100%] ease-in duration-500 z-10'
+                        : 'absolute top-0 h-screen left-[-100%] ease-in duration-500 z-10000'
                 }
             >
                 <ul className='flex flex-col fixed w-full h-full space-y-4 items-center justify-start mt-12'>
@@ -137,6 +139,8 @@ const Navbar = () => {
                 </ul>
             </div>
         </div>
+        </>
+       
     );
 };
 
