@@ -95,7 +95,7 @@ const Projects = () => {
                             </div>
 
                             <div className='flex flex-row justify-between px-4 pt-4 pb-4'>
-                                <a href="https://github.com/abolarin100/parceltracker">
+                                <a href="https://github.com/abolarin100/logistics-website">
                                     <button className='hover:bg-[#7b8ca71a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >GitHub</button>
                                 </a>
                                 <a href="https://multibag-deliveries.vercel.app/">
@@ -139,7 +139,7 @@ const Projects = () => {
 
 
                     </div>
-                    
+
                     <div className='flex flex-col items-start space-y-[1px] bg-[#A7AEB91A] hover:scale-105  '>
                         <img src={Ja} alt=""
                             className=' w-full object-cover'
