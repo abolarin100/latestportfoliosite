@@ -4,7 +4,7 @@ import Ga from '../assets/image/sawl.png'
 import Ha from '../assets/image/menu.png'
 import Ja from '../assets/image/job.png'
 import La from '../assets/image/myweb.png'
-import Pa from '../assets/image/mbd.png'
+import Pa from '../assets/image/mbgdd.png'
 import '../css/Projects.css'
 
 const Projects = () => {
@@ -114,9 +114,9 @@ const Projects = () => {
                         <div className=' shadow-md shadow-gray-400 w-full rounded-b-md'>
                             <div className='flex flex-row justify-between pt-2 px-4'>
                                 <div className='pt-2'>
-                                    <h2 className='font-semibold'>Multi-bag Delivery </h2>
+                                    <h2 className='font-semibold'>Multi-bag Deliveries </h2>
                                     <div className='flex space-x-2 pt-2'>
-                                        <p>A Parcel tracker platform for monitoring the delivery date of goods.</p>
+                                        <p>A web app that allows users book deliveries, and easily manage their package shipping needs. </p>
 
                                     </div>
                                 </div>
@@ -127,7 +127,7 @@ const Projects = () => {
                                 <a href="https://github.com/abolarin100/parceltracker">
                                     <button className='hover:bg-[#7b8ca71a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >GitHub</button>
                                 </a>
-                                <a href="https://parceltracker.vercel.app/">
+                                <a href="https://multibag-deliveries.vercel.app/">
                                     <button className='hover:bg-[#a5b3c91a] hover:scale-125 text-xs bg-[#415f8f1a] text-blue-500 border-1 border-blue-500' >Live link</button>
 
                                 </a>

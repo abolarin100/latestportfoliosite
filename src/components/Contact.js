@@ -17,36 +17,47 @@ const Contact = (props) => {
         if (!name || !email || !subject || !message) {
             return toast.error("Please complete the form above");
         }
-
+    
         setLoading(true);
-
+    
         const data = {
             name,
             email,
             subject,
             message,
         };
-
-        emailjs
-            .send(
-                "service_08olbls",
-                "template_3i5a3st",
-                data,
-                "ui0CEUg8sgz2jxmXE"
-            )
-            .then(
-                (result) => {
-                    setLoading(false);
-                    toast.success(`Successfully sent email.`);
-                    window.location.href="#home" ;
+    
+        try {
+            const response = await fetch("https://getform.io/f/aejyqklb", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
                 },
-                (error) => {
-                    setLoading(false);
-                    console.log(error);
-                    toast.error(error.text);
-                }
-            );
+                body: JSON.stringify(data),
+            });
+    
+            if (response.ok) {
+                setLoading(false);
+                toast.success("Successfully sent email.");
+                setName(""); // Clear form
+                setEmail(""); // Clear form
+                setSubject(""); // Clear form
+                setMessage(""); // Clear form
+                window.location.href = "#home";
+            } else {
+                setLoading(false);
+                const errorData = await response.json();
+                toast.error("Failed to send email. Please try again.");
+                console.log(errorData);
+            }
+        } catch (error) {
+            setLoading(false);
+            toast.error("An error occurred while sending the email.");
+            console.log(error);
+        }
     };
+    
+    
 
     return (
         <section className="contact container section" id="contact">
@@ -67,6 +78,7 @@ const Contact = (props) => {
                                 type="text"
                                 className="contact__form-input"
                                 placeholder="Your full name"
+                                value={name} 
                                 onChange={(e) => setName(e.target.value)}
                             />
                         </div>
@@ -76,6 +88,7 @@ const Contact = (props) => {
                                 type="email"
                                 className="contact__form-input"
                                 placeholder="Your email"
+                                value={email} 
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
@@ -86,6 +99,7 @@ const Contact = (props) => {
                             type="text"
                             className="contact__form-input"
                             placeholder="Email subject"
+                            value={subject} 
                             onChange={(e) => setSubject(e.target.value)}
                         />
                     </div>
@@ -98,6 +112,7 @@ const Contact = (props) => {
                             rows="10"
                             className="contact__form-input"
                             placeholder="Write your message"
+                            value={message} 
                             onChange={(e) => setMessage(e.target.value)}
                         ></textarea>
                     </div>

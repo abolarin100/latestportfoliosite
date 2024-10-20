@@ -89,6 +89,12 @@ const Skills = () => {
             imageSource: require("../assets/framer.png"),
             
         },
+        {
+            id: 18,
+            name: "Socket.io",
+            imageSource: require("../assets/socketimg.png"),
+            
+        },
     ];
 
 
