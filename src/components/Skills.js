@@ -5,10 +5,29 @@ import CircleCard from './CircleCard';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
-
     const skillData = [
         {
             id: 1,
+            name: "Java",
+            imageSource: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        },
+        {
+            id: 2,
+            name: "Spring Boot",
+            imageSource: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+        },
+        {
+            id: 3,
+            name: "Docker",
+            imageSource: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+        },
+        {
+            id: 4,
+            name: "PostgreSQL",
+            imageSource: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        },
+        {
+            id: 5,
             name: "Javascript",
             imageSource: require("../assets/javas.png"),
         },
