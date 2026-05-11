@@ -1,130 +1,134 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import emailjs from "@emailjs/browser";
-
-import '../css/Contact.css'
+import "../css/Contact.css";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = (props) => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [subject, setSubject] = useState("");
-    const [message, setMessage] = useState("");
-    const [loading, setLoading] = useState(false);
+  const formRef = useRef();
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-    const submitHandler = async (e) => {
-        e.preventDefault();
-        if (!name || !email || !subject || !message) {
-            return toast.error("Please complete the form above");
-        }
-    
-        setLoading(true);
-    
-        const data = {
-            name,
-            email,
-            subject,
-            message,
-        };
-    
-        try {
-            const response = await fetch("https://getform.io/f/aejyqklb", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            });
-    
-            if (response.ok) {
-                setLoading(false);
-                toast.success("Successfully sent email.");
-                setName(""); // Clear form
-                setEmail(""); // Clear form
-                setSubject(""); // Clear form
-                setMessage(""); // Clear form
-                window.location.href = "#home";
-            } else {
-                setLoading(false);
-                const errorData = await response.json();
-                toast.error("Failed to send email. Please try again.");
-                console.log(errorData);
-            }
-        } catch (error) {
-            setLoading(false);
-            toast.error("An error occurred while sending the email.");
-            console.log(error);
-        }
-    };
-    
-    
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
-    return (
-        <section className="contact container section" id="contact">
-            <h2 className="section__title">Get In Touch With Me</h2>
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-            <div className="contact__container grid">
-                <div className="contact__info">
-                    <h3 className="contact__title">Let's talk about everything!</h3>
-                    <p className="contact__details">
-                        Send me an email here. 👋
-                    </p>
-                </div>
+    const { name, email, subject, message } = form;
 
-                <form onSubmit={submitHandler} className="contact__form">
-                    <div className="contact__form-group">
-                        <div className="contact__form-div">
-                            <input
-                                type="text"
-                                className="contact__form-input"
-                                placeholder="Your full name"
-                                value={name} 
-                                onChange={(e) => setName(e.target.value)}
-                            />
-                        </div>
+    if (!name || !email || !subject || !message) {
+      return toast.error("Please complete all fields.");
+    }
 
-                        <div className="contact__form-div">
-                            <input
-                                type="email"
-                                className="contact__form-input"
-                                placeholder="Your email"
-                                value={email} 
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
-                        </div>
-                    </div>
+    // Basic email format check
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return toast.error("Please enter a valid email address.");
+    }
 
-                    <div className="contact__form-div">
-                        <input
-                            type="text"
-                            className="contact__form-input"
-                            placeholder="Email subject"
-                            value={subject} 
-                            onChange={(e) => setSubject(e.target.value)}
-                        />
-                    </div>
+    setLoading(true);
 
-                    <div className="contact__form-div contact__form-area">
-                        <textarea
-                            name=""
-                            id=""
-                            cols="30"
-                            rows="10"
-                            className="contact__form-input"
-                            placeholder="Write your message"
-                            value={message} 
-                            onChange={(e) => setMessage(e.target.value)}
-                        ></textarea>
-                    </div>
+    try {
+      await emailjs.sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+      );
 
-                    <button type="submit" className="btn">
-                        {loading ? "Sending..." : "Send Message"}
-                    </button>
-                </form>
-                <ToastContainer position="bottom-right" theme={props.theme} />
+      toast.success("Message sent! I'll get back to you soon. 🎉");
+      setForm({ name: "", email: "", subject: "", message: "" });
+      window.location.href = "#home";
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <section className="contact container section" id="contact">
+      <h2 className="section__title">Get In Touch With Me</h2>
+
+      <div className="contact__container grid">
+        <div className="contact__info">
+          <h3 className="contact__title">Let's talk about everything!</h3>
+          <p className="contact__details">
+            Drop me a message and I'll get back to you. 👋
+          </p>
+        </div>
+
+        <form ref={formRef} onSubmit={handleSubmit} className="contact__form">
+          <div className="contact__form-group">
+            <div className="contact__form-div">
+              <input
+                type="text"
+                name="name"
+                className="contact__form-input"
+                placeholder="Your full name"
+                value={form.name}
+                onChange={handleChange}
+              />
             </div>
-        </section>
-    );
+
+            <div className="contact__form-div">
+              <input
+                type="email"
+                name="email"
+                className="contact__form-input"
+                placeholder="Your email"
+                value={form.email}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          <div className="contact__form-div">
+            <input
+              type="text"
+              name="subject"
+              className="contact__form-input"
+              placeholder="Email subject"
+              value={form.subject}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="contact__form-div contact__form-area">
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              className="contact__form-input"
+              placeholder="Write your message"
+              value={form.message}
+              onChange={handleChange}
+            />
+          </div>
+
+          <button type="submit" className="btn" disabled={loading}>
+            {loading ? (
+              <>
+                <span className="btn__spinner" /> Sending...
+              </>
+            ) : (
+              "Send Message"
+            )}
+          </button>
+        </form>
+
+        <ToastContainer position="bottom-right" theme={props.theme} />
+      </div>
+    </section>
+  );
 };
 
 export default Contact;
