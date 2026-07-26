@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 255 255 255; /* white */
+  --surface: 244 245 240;
+  --fg: 10 10 10; /* near-black */
+  --fg-soft: 66 68 61;
+  --fg-muted: 120 122 113;
+  --line: 224 225 217;
+  --line-strong: 196 198 186;
+  --army: 75 83 32; /* #4B5320 army green */
+  --army-soft: 232 235 220;
+  --amber: 156 107 18;
+  --amber-soft: 244 234 216;
+}
+
+.dark {
+  --bg: 10 10 9; /* near-black */
+  --surface: 22 23 19;
+  --fg: 245 245 240; /* near-white */
+  --fg-soft: 197 199 188;
+  --fg-muted: 138 140 130;
+  --line: 44 46 38;
+  --line-strong: 66 69 56;
+  --army: 158 179 112; /* lighter army green, for contrast on black */
+  --army-soft: 33 38 22;
+  --amber: 214 168 96;
+  --amber-soft: 42 36 20;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--fg));
+  background-image: radial-gradient(rgb(var(--fg) / 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::selection {
+  background-color: rgb(var(--army));
+  color: rgb(var(--bg));
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgb(var(--army));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
