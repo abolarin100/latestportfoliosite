@@ -6,9 +6,6 @@ export function Skills() {
   return (
     <section
       id="skills"
-      // Full-bleed tinted band — surface color runs edge-to-edge like the
-      // light-blue "why choose us" band on gywde — while the content
-      // inside stays readable-width via <Container>.
       className="relative overflow-hidden border-b border-line bg-surface py-14"
     >
       <div
@@ -29,7 +26,11 @@ export function Skills() {
 
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
           {Object.entries(stack).map(([category, items], i) => (
-            <Reveal key={category} variant={i % 2 === 0 ? "left" : "right"} delay={i * 80}>
+            <Reveal
+              key={category}
+              variant={i % 2 === 0 ? "left" : "right"}
+              delay={i * 80}
+            >
               <p className="font-mono text-[12px] tracking-wide text-fg-muted">
                 {category.toUpperCase()}
               </p>

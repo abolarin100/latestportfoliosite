@@ -40,7 +40,6 @@ export function Projects() {
         </Reveal>
 
         <div className="mt-8 space-y-4">
-          {/* Flagship — full width, larger image, scales in as it lands */}
           <Reveal variant="scale" threshold={0.1}>
             <article className={`${cardClass} md:flex-row md:gap-6`}>
               <div className="md:w-2/5">
@@ -68,8 +67,6 @@ export function Projects() {
               </div>
             </article>
           </Reveal>
-
-          {/* Supporting projects — smaller, three across, staggered slide-up */}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {rest.map((p, i) => (
               <Reveal key={p.title} variant="up" delay={i * 100} threshold={0.15}>

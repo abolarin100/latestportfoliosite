@@ -8,8 +8,7 @@ function detectPlatform(): Platform {
   if (typeof navigator === "undefined") return "both";
   const ua = navigator.userAgent || "";
 
-  // iPadOS 13+ reports as "Macintosh" but exposes touch points, unlike a
-  // real Mac — this catches iPads that would otherwise look like desktop.
+
   const isIOS =
     /iPhone|iPad|iPod/.test(ua) ||
     (ua.includes("Macintosh") && navigator.maxTouchPoints > 1);
@@ -32,10 +31,7 @@ function Skeleton() {
 }
 
 export function StoreLink({ ios, android }: { ios: string; android: string }) {
-  // Server-rendered and first client render must match (no `navigator`
-  // during SSR), so we can't know the real platform until after mount.
-  // Rather than guessing "both" and having buttons pop/shift once
-  // detection resolves, show a real skeleton for that gap instead.
+ 
   const [platform, setPlatform] = useState<Platform | null>(null);
 
   useEffect(() => {

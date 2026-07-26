@@ -14,8 +14,7 @@ export function Contact() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<Status>("idle");
 
-  // "Sent" is a transient confirmation, not a permanent state — clear it
-  // after a few seconds so the form is visibly ready for another message.
+
   useEffect(() => {
     if (status !== "sent") return;
     const t = setTimeout(() => setStatus("idle"), 4000);
@@ -29,9 +28,7 @@ export function Contact() {
     const subject = `Portfolio contact from ${name || "your site"}`;
     const body = `${message}\n\n— ${name}${email ? ` (${email})` : ""}`;
 
-    // Opening mailto: is synchronous, but giving the button a brief,
-    // visible "submitting" moment (rather than an instant jump-cut to
-    // "sent") reads as deliberate rather than broken.
+ 
     window.setTimeout(() => {
       window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(
         subject,

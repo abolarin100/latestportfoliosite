@@ -9,7 +9,6 @@ interface RevealProps {
   delay?: number;
   className?: string;
   variant?: Variant;
-  /** Fraction of the element that must be visible before it animates in. */
   threshold?: number;
 }
 
@@ -24,11 +23,6 @@ const HIDDEN: Record<Variant, string> = {
 
 const VISIBLE = "opacity-100 translate-y-0 translate-x-0 scale-100 blur-none";
 
-/**
- * Fades/slides content in whenever it scrolls into view — and reverses
- * back to hidden when it scrolls out, so the animation replays every
- * time the section re-enters the viewport (not just on first mount).
- */
 export function Reveal({
   children,
   delay = 0,

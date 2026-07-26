@@ -28,7 +28,7 @@ export function Nav() {
       const goingDown = y > lastY.current;
 
       if (menuOpen) {
-        // Never hide the nav out from under an open mobile menu.
+     
         lastY.current = y;
         return;
       }
