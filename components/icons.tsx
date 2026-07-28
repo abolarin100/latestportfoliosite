@@ -61,3 +61,32 @@ export function DownloadIcon(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function ChatIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" {...props}>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4 5.5h16v10.5H8l-4 3.5V5.5Z"
+      />
+    </svg>
+  );
+}
+
+export function SendIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M3 11.5 20.5 4 13 21.5l-2.4-7.1L3 11.5Zm7.9 2.1 5.5-9.6-9.6 5.5 4.1 4.1Z" />
+    </svg>
+  );
+}
+
+export function CloseIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" {...props}>
+      <path strokeLinecap="round" d="M6 6l12 12M18 6 6 18" />
+    </svg>
+  );
+}
+
