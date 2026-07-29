@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { profile } from "@/data/content";
 import { ThemeProvider, themeInitScript } from "@/components/ThemeProvider";
+import { Chatbot } from "@/components/Chatbot";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -8,7 +9,11 @@ export const metadata: Metadata = {
   description: profile.thesis,
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -18,7 +23,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Fetched at runtime in the browser, not at build time — keeps the
             build itself free of any external network dependency. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
           rel="stylesheet"
@@ -26,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="font-body antialiased" suppressHydrationWarning>
         <ThemeProvider>{children}</ThemeProvider>
+        <Chatbot />
       </body>
     </html>
   );
